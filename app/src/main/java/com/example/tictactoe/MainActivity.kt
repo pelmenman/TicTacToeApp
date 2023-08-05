@@ -44,7 +44,7 @@ fun MainScreen() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Text("Tic Tac Toe!")
+        Text(text = "TIC TAC TOE!")
         Button(onClick = {},
             modifier = Modifier.padding(top = 50.dp, bottom = 20.dp)){
             Text("Single-player")
