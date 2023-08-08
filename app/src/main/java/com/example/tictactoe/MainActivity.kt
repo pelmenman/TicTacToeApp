@@ -6,10 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.tictactoe.screens.MainScreen
-import com.example.tictactoe.screens.MultiplayerGameScreen
-import com.example.tictactoe.screens.SettingsScreen
-import com.example.tictactoe.screens.SingleGameScreen
+import com.example.tictactoe.screens.*
 import com.example.tictactoe.ui.theme.TicTacToeTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,9 +15,21 @@ class MainActivity : ComponentActivity() {
         setContent {
             TicTacToeTheme {
                 val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "main") {
+                NavHost(navController = navController, startDestination = "start_screen") {
+                    composable("start_screen") {
+                        StartScreen(navController = navController)
+                    }
+
+                    composable("create_account") {
+                        CreateAccountScreen(navController = navController)
+                    }
+
+                    composable("log_in") {
+                        LogInScreen()
+                    }
+
                     composable("main") {
-                        MainScreen(navController)
+                        MainScreen(navController = navController)
                     }
 
                     composable("single_game") {
