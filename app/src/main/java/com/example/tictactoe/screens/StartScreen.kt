@@ -2,7 +2,6 @@ package com.example.tictactoe.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,7 +20,7 @@ fun StartScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Row() {
+        Row {
             Text(text = "TIC ", color = LightBlue65, fontSize = 35.sp)
             Text(text = "TAC ", color = Grey57, fontSize = 35.sp)
             Text(text = "TOE!", color = PinkyRed62, fontSize = 35.sp)
