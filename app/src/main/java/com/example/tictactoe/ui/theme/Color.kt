@@ -3,6 +3,7 @@ package com.example.tictactoe.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val LightBlue90 = Color(0xFFe8f4fc)
+val LightBlue82 = Color(0xFFC3DCF3)
 val LightBlue80 = Color(0xFFa3d3f5)
 val LightBlue70 = Color(0xFF75bdf0)
 val LightBlue65 = Color(0xFF5eb2ed)
@@ -27,6 +28,7 @@ val Grey10 = Color(0xFF1a1a1a)
 
 
 val PinkyRed90 = Color(0xFFfdced7)
+val PinkyRed82 = Color(0xFFFBBDC8)
 val PinkyRed80 = Color(0xFFfa9eaf)
 val PinkyRed70 = Color(0xFFf86d86)
 val PinkyRed62 = Color(0xFFF64766)

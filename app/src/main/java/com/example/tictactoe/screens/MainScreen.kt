@@ -1,6 +1,7 @@
 package com.example.tictactoe.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,15 +31,36 @@ fun MainScreen(
 
         Spacer(modifier = Modifier.padding(50.dp))
 
-        Button(onClick = {navController.navigate("single_game")}, modifier = Modifier.padding(top = 50.dp, bottom = 20.dp))
+        Button(
+            onClick = {navController.navigate("single_game")},
+            modifier = Modifier
+                .padding(top = 50.dp, bottom = 10.dp)
+                .height(60.dp)
+                .width(270.dp),
+            shape = RoundedCornerShape(20)
+        )
         {
             Text("Single-player")
         }
-        Button(onClick = {navController.navigate("multiplayer_game")}, modifier = Modifier.padding(20.dp))
+        Button(
+            onClick = {navController.navigate("multiplayer_game")},
+            modifier = Modifier
+                .padding(10.dp)
+                .height(60.dp)
+                .width(270.dp),
+            shape = RoundedCornerShape(20)
+        )
         {
             Text("Multiplayer")
         }
-        Button(onClick = {navController.navigate("settings")}, modifier = Modifier.padding(20.dp))
+        Button(
+            onClick = {navController.navigate("settings")},
+            modifier = Modifier
+                .padding(10.dp)
+                .height(60.dp)
+                .width(270.dp),
+            shape = RoundedCornerShape(20)
+        )
         {
             Text("Settings")
         }

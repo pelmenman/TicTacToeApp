@@ -9,8 +9,12 @@ import androidx.compose.ui.unit.sp
 import com.example.tictactoe.R
 
 
-private val FredokaOne = FontFamily(
-    Font(R.font.fredoka_one_regular, weight = FontWeight.Normal)
+val FredokaOne = FontFamily(
+    Font(R.font.fredoka_one_regular)
+)
+
+val Fredoka = FontFamily(
+    Font(R.font.fredoka_regular)
 )
 
 
@@ -24,21 +28,21 @@ val Typography = Typography(
         letterSpacing = 0.5.sp
     ),
     bodyMedium = TextStyle(
-        fontFamily = FredokaOne,
+        fontFamily = Fredoka,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
     bodySmall = TextStyle(
-        fontFamily = FredokaOne,
+        fontFamily = Fredoka,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
     labelLarge = TextStyle(
-        fontFamily = FredokaOne,
+        fontFamily = Fredoka,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
