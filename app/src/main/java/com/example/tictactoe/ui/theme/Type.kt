@@ -9,54 +9,26 @@ import androidx.compose.ui.unit.sp
 import com.example.tictactoe.R
 
 
-val FredokaOne = FontFamily(
-    Font(R.font.fredoka_one_regular)
-)
+val FredokaOne = FontFamily(Font(R.font.fredoka_one_regular))
 
-val Fredoka = FontFamily(
-    Font(R.font.fredoka_regular)
-)
+val FredokaBold = FontFamily(Font(R.font.fredoka_bold))
+
+val Fredoka = FontFamily(Font(R.font.fredoka_regular))
 
 
 // Set of Material typography styles to start with
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FredokaOne,
+        fontFamily = FredokaBold,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
+        fontSize = 20.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
-    bodyMedium = TextStyle(
-        fontFamily = Fredoka,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    ),
-    bodySmall = TextStyle(
-        fontFamily = Fredoka,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    ),
+
+    //For buttons
     labelLarge = TextStyle(
         fontFamily = Fredoka,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    ),
-    labelMedium = TextStyle(
-        fontFamily = FredokaOne,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    ),
-    labelSmall = TextStyle(
-        fontFamily = FredokaOne,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,

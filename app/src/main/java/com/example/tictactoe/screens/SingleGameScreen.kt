@@ -21,33 +21,60 @@ fun SingleGameScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                Text("You", modifier = Modifier.padding(bottom = 10.dp), fontFamily = Fredoka, color = Grey57)
-                Image(
-                    imageVector = ImageVector.vectorResource(id = R.drawable.cross_light_red),
-                    contentDescription = "cross",
-                    modifier = Modifier.size(70.dp)
-                )
-            }
-
+            UsersTurnWidget()
             Spacer(modifier = Modifier.size(120.dp))
-
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ){
-                Text("Computer", modifier = Modifier.padding(bottom = 10.dp), fontFamily = Fredoka, color = Grey57)
-                Image(
-                    imageVector = ImageVector.vectorResource(id = R.drawable.circle_light_blue),
-                    contentDescription = "circle",
-                    modifier = Modifier.size(70.dp)
-                )
-            }
+            ComputersTurnWidget()
         }
         Spacer(modifier = Modifier.size(70.dp))
-        Image(imageVector = ImageVector.vectorResource(id = R.drawable.field_grid), contentDescription = "field grid", modifier = Modifier.size(370.dp))
+        Field()
     }
+}
+
+@Composable
+private fun UsersTurnWidget() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            "You",
+            modifier = Modifier.padding(bottom = 10.dp),
+            fontFamily = Fredoka,
+            color = Grey57
+        )
+        Image(
+            imageVector = ImageVector.vectorResource(id = R.drawable.cross_light_red),
+            contentDescription = "cross",
+            modifier = Modifier.size(70.dp)
+        )
+    }
+}
+
+@Composable
+private fun ComputersTurnWidget() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            "Computer",
+            modifier = Modifier.padding(bottom = 10.dp),
+            fontFamily = Fredoka,
+            color = Grey57
+        )
+        Image(
+            imageVector = ImageVector.vectorResource(id = R.drawable.circle_light_blue),
+            contentDescription = "circle",
+            modifier = Modifier.size(70.dp)
+        )
+    }
+}
+
+@Composable
+private fun Field() {
+    Image(
+        imageVector = ImageVector.vectorResource(id = R.drawable.field_grid),
+        contentDescription = "field grid",
+        modifier = Modifier.size(370.dp)
+    )
 }

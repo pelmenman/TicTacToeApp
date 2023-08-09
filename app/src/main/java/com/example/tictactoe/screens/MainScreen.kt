@@ -23,47 +23,65 @@ fun MainScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Row() {
-            Text(text = "TIC ", color = LightBlue65, fontSize = 30.sp)
-            Text(text = "TAC ", color = Grey57, fontSize = 30.sp)
-            Text(text = "TOE!", color = PinkyRed62, fontSize = 30.sp)
-        }
 
+        Title()
         Spacer(modifier = Modifier.padding(50.dp))
-
-        Button(
-            onClick = {navController.navigate("single_game")},
-            modifier = Modifier
-                .padding(top = 50.dp, bottom = 10.dp)
-                .height(60.dp)
-                .width(270.dp),
-            shape = RoundedCornerShape(20)
-        )
-        {
-            Text("Single-player")
-        }
-        Button(
-            onClick = {navController.navigate("multiplayer_game")},
-            modifier = Modifier
-                .padding(10.dp)
-                .height(60.dp)
-                .width(270.dp),
-            shape = RoundedCornerShape(20)
-        )
-        {
-            Text("Multiplayer")
-        }
-        Button(
-            onClick = {navController.navigate("settings")},
-            modifier = Modifier
-                .padding(10.dp)
-                .height(60.dp)
-                .width(270.dp),
-            shape = RoundedCornerShape(20)
-        )
-        {
-            Text("Settings")
-        }
+        SinglePlayerButton(navController)
+        MultiplayerGameButton(navController)
+        SettingsButton(navController)
     }
+}
 
+@Composable
+private fun Title() {
+    Row {
+        Text(text = "TIC ", color = LightBlue65, fontSize = 30.sp)
+        Text(text = "TAC ", color = Grey57, fontSize = 30.sp)
+        Text(text = "TOE!", color = PinkyRed62, fontSize = 30.sp)
+    }
+}
+
+@Composable
+private fun SinglePlayerButton(navController: NavController) {
+    Button(
+        onClick = { navController.navigate("single_game") },
+        modifier = Modifier
+            .padding(top = 50.dp, bottom = 10.dp)
+            .height(60.dp)
+            .width(270.dp),
+        shape = RoundedCornerShape(40)
+    )
+    {
+        Text("Single-player")
+    }
+}
+
+@Composable
+private fun MultiplayerGameButton(navController: NavController) {
+    Button(
+        onClick = { navController.navigate("multiplayer_game") },
+        modifier = Modifier
+            .padding(10.dp)
+            .height(60.dp)
+            .width(270.dp),
+        shape = RoundedCornerShape(40)
+    )
+    {
+        Text("Multiplayer")
+    }
+}
+
+@Composable
+private fun SettingsButton(navController: NavController) {
+    Button(
+        onClick = { navController.navigate("settings") },
+        modifier = Modifier
+            .padding(10.dp)
+            .height(60.dp)
+            .width(270.dp),
+        shape = RoundedCornerShape(40)
+    )
+    {
+        Text("Settings")
+    }
 }

@@ -22,32 +22,46 @@ fun StartScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Row {
-            Text(text = "TIC ", color = LightBlue65, fontSize = 35.sp)
-            Text(text = "TAC ", color = Grey57, fontSize = 35.sp)
-            Text(text = "TOE!", color = PinkyRed62, fontSize = 35.sp)
-        }
+        Title()
         Spacer(Modifier.size(200.dp))
-        Button(
-            onClick = {navController.navigate("create_account")},
-            modifier = Modifier
-                .padding(10.dp)
-                .height(60.dp)
-                .width(300.dp),
-            shape = RoundedCornerShape(20)
-        ) {
-            Text("Create account")
-        }
-        Button(
-            onClick = {navController.navigate("log_in")},
-            modifier = Modifier
-                .height(60.dp)
-                .width(300.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = PinkyRed62),
-            shape = RoundedCornerShape(20)
-        ) {
-            Text("Log in")
-        }
+        CreateAccountButton(navController)
+        LogInButton(navController)
+    }
+}
 
+@Composable
+private fun Title() {
+    Row {
+        Text(text = "TIC ", color = LightBlue65, fontSize = 35.sp)
+        Text(text = "TAC ", color = Grey57, fontSize = 35.sp)
+        Text(text = "TOE!", color = PinkyRed62, fontSize = 35.sp)
+    }
+}
+
+@Composable
+private fun CreateAccountButton(navController: NavController) {
+    Button(
+        onClick = { navController.navigate("create_account") },
+        modifier = Modifier
+            .padding(bottom = 30.dp)
+            .height(60.dp)
+            .width(300.dp),
+        shape = RoundedCornerShape(40)
+    ) {
+        Text("Create account")
+    }
+}
+
+@Composable
+private fun LogInButton(navController: NavController) {
+    Button(
+        onClick = { navController.navigate("log_in") },
+        modifier = Modifier
+            .height(60.dp)
+            .width(300.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = PinkyRed62),
+        shape = RoundedCornerShape(40)
+    ) {
+        Text("Log in")
     }
 }
