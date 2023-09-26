@@ -6,8 +6,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.tictactoe.ui.components.MenuButton
-import com.example.tictactoe.ui.components.Title
+import com.example.tictactoe.ui.components.button.MenuButton
+import com.example.tictactoe.ui.components.text.Title
 import com.example.tictactoe.ui.theme.PinkyRed62
 
 @Composable

@@ -5,9 +5,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.tictactoe.ui.components.ComputersTurnWidget
-import com.example.tictactoe.ui.components.Field
-import com.example.tictactoe.ui.components.UsersTurnWidget
+import com.example.tictactoe.ui.components.game.ComputersTurnWidget
+import com.example.tictactoe.ui.components.game.Field
+import com.example.tictactoe.ui.components.game.UsersTurnWidget
+
 
 @Composable
 fun SingleGameScreen() {
