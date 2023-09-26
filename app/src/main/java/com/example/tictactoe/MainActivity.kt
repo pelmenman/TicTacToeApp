@@ -15,7 +15,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             TicTacToeTheme {
                 val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "start_screen") {
+                NavHost(navController = navController, startDestination = "sign_up_screen") {
+                    composable("sign_up_screen"){
+                        SignUpScreen()
+                    }
+
                     composable("start_screen") {
                         StartScreen(navController = navController)
                     }

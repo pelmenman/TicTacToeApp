@@ -1,8 +1,5 @@
 package com.example.tictactoe.screens
 
-import android.app.Service
-import android.widget.EditText
-import androidx.compose.foundation.interaction.FocusInteraction
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
@@ -14,19 +11,15 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusManager
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.tictactoe.api.ServiceClient
-import com.example.tictactoe.ui.theme.*
-import kotlinx.coroutines.CoroutineScope
+import com.example.tictactoe.ui.theme.Fredoka
+import com.example.tictactoe.ui.theme.Grey90
 import kotlinx.coroutines.launch
 
 @Composable
@@ -84,8 +77,9 @@ fun CreateAccountScreen(navController: NavController) {
                     ServiceClient.signUp(username, email, password)
                 }
             },
-            modifier = Modifier.height(60.dp)
-            .width(300.dp),
+            modifier = Modifier
+                .height(60.dp)
+                .width(300.dp),
             shape = RoundedCornerShape(40)
         ) {
             Text("Register")

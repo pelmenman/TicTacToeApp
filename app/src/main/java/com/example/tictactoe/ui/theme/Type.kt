@@ -19,7 +19,7 @@ val Fredoka = FontFamily(Font(R.font.fredoka_regular))
 // Set of Material typography styles to start with
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FredokaBold,
+        fontFamily = Fredoka,
         fontWeight = FontWeight.Normal,
         fontSize = 20.sp,
         lineHeight = 24.sp,

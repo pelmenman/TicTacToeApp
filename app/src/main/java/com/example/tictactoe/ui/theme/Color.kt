@@ -14,6 +14,7 @@ val LightBlue30 = Color(0xFF0f578a)
 val LightBlue20 = Color(0xFF0a3a5c)
 val LightBlue10 = Color(0xFF051d2e)
 
+val Grey95 = Color(0xFFf2f2f2)
 val Grey90 = Color(0xFFe6e6e6)
 val Grey80 = Color(0xFFcccccc)
 val Grey70 = Color(0xFFb3b3b3)
